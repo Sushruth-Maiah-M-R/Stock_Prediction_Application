@@ -7,7 +7,9 @@ import numpy as np
 import time
 from datetime import timedelta
 
-API_KEY = "d7jknuhr01qhf13f8dbgd7jknuhr01qhf13f8dc0"
+# Load API key from external txt file
+with open("api_key.txt", "r") as file:
+    API_KEY = file.read().strip()
 
 # Better symbols for Nasdaq sentiment
 SYMBOLS = ["QQQ", "AAPL", "MSFT", "NVDA"]
